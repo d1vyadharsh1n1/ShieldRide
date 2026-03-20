@@ -68,14 +68,6 @@ ERI = Environmental Risk Index
 * **Future Vision:** Blockchain-based "Trustless Payouts" and satellite-integrated weather tracking.
 
 
----
-
-### Why this is better for a Hackathon:
-1.  **Bolded Keywords:** Judges can scan and see "Parametric," "XGBoost," and "Isolation Forest."
-2.  **The Formula:** Including the LaTeX math makes the project feel "heavy" and technically grounded.
-3.  **The "Why":** You clearly defined the SDR and ZSI, which shows you actually understand the domain (the gig economy).
-
-**Would you like me to help you draft a "Pitch" or a "Demo Script" based on this for your presentation?**
 
 ## Installation & Setup
 
@@ -113,9 +105,9 @@ npm run dev
 Create a `.env` file:
 
 ```
-WEATHER_API_KEY=your_key
-MAPS_API_KEY=your_key
-DATABASE_URL=your_db_url
+WEATHER_API_KEY=your_key(will be updated)
+MAPS_API_KEY=your_key(will be updated)
+DATABASE_URL=your_db_url(will be updated)
 ```
 
 ---
