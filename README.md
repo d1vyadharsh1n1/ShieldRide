@@ -229,6 +229,59 @@ ShieldRide uses **predefined, data-driven triggers** to automatically detect dis
 * Fraud-resistant (multi-signal validation)
 
 ---
+## Parameter Selection & Model Scope
+
+---
+
+### Excluded High-Uncertainty Factors
+
+Certain macro-level risks such as:
+
+* War / geopolitical disruptions
+* Pandemic-scale events
+
+were evaluated but **excluded from the premium calculation**.
+
+**Reason:**
+
+* Highly unpredictable and non-localized
+* Difficult to model with short-term, real-time data
+* Introduces instability in weekly pricing
+
+> These are better handled via **separate catastrophic risk layers**, not core pricing.
+
+---
+
+### Weighted Parameter Strategy
+
+The model prioritizes **high-frequency, localized, and measurable signals** over indirect or platform-dependent factors.
+
+---
+
+### Higher-Weight Parameters
+
+* 🌡️ Heat index
+* 🌧️ Rainfall intensity
+* 🌫️ Air Quality Index (AQI)
+* 📉 Real-time demand volatility
+
+> Directly impact worker productivity and income disruption
+
+---
+
+### Lower-Weight Parameters
+
+* Dark store availability
+* Platform stability / minor outages
+
+> While relevant, these are:
+
+* Less frequent
+* Platform-controlled
+* Lower impact compared to environmental risks
+
+---
+
 
 # Dynamic Weekly Premium Model
 
@@ -717,36 +770,4 @@ were evaluated but **excluded from the premium calculation**.
 > These are better handled via **separate catastrophic risk layers**, not core pricing.
 
 ---
-
-### Weighted Parameter Strategy
-
-The model prioritizes **high-frequency, localized, and measurable signals** over indirect or platform-dependent factors.
-
----
-
-### Higher-Weight Parameters
-
-* 🌡️ Heat index
-* 🌧️ Rainfall intensity
-* 🌫️ Air Quality Index (AQI)
-* 📉 Real-time demand volatility
-
-> Directly impact worker productivity and income disruption
-
----
-
-### Lower-Weight Parameters
-
-* Dark store availability
-* Platform stability / minor outages
-
-> While relevant, these are:
-
-* Less frequent
-* Platform-controlled
-* Lower impact compared to environmental risks
-
----
-
-
 
