@@ -58,10 +58,6 @@ $$DRI = w_1(DVI) + w_2(1 - PSI) + w_3(ERI)$$
 * **For the Platform:** Reduced rider churn and better distribution of fleet during peak hours.
 * **Future Vision:** Blockchain-based "Trustless Payouts" and satellite-integrated weather tracking.
 
----
-
-### 🛠️ Installation & Setup
-*(Keep your existing installation steps here—they are perfect as is!)*
 
 ---
 
@@ -77,7 +73,7 @@ $$DRI = w_1(DVI) + w_2(1 - PSI) + w_3(ERI)$$
 ### Clone Repository
 
 ```bash
-git clone https://github.com/your-repo/insure.git
+git clone https://github.com/dharumaran/insure.git
 cd insure
 ```
 
@@ -144,8 +140,3 @@ DATABASE_URL=your_db_url
 
 InSURE is a **real-time income stabilization and decision intelligence system** for gig workers.
 
----
-
-## License
-
-MIT License
