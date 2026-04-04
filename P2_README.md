@@ -208,12 +208,12 @@ India's quick-commerce sector (Zepto, Blinkit, Swiggy Instamart) has created **~
 
 ---
 
-## 👤 Persona Deep-Dive — Rajan, the Zepto Rider
+## 👤 Persona Deep-Dive — Priyanjali, the Zepto Rider
 
 > *This is not a fictional persona. This is 800,000 people.*
 
 ```
-Name:       Rajan Kumar, 26
+Name:       Priyanjali, 26
 City:       Chennai, Tamil Nadu
 Platform:   Zepto (Grocery / Q-Commerce)
 Device:     Redmi Note 11 (3GB RAM, Android 12)
