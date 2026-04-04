@@ -8,8 +8,11 @@ import { PrismaClient } from '@prisma/client'
 const apiDir = dirname(fileURLToPath(import.meta.url))
 const envPath = join(apiDir, '..', '.env')
 
-// npm / Docker often pre-set DATABASE_URL (e.g. host `postgres`). Local `.env` must win.
-const parsed = config({ path: envPath, override: true })
+// Local dev / Docker Compose: shell may set DATABASE_URL (e.g. host `postgres`); `.env` should win.
+// Vercel / production: platform env must win — never let a stray `.env` override DATABASE_URL with localhost.
+const dotenvOverride =
+  process.env['VERCEL'] !== '1' && process.env['NODE_ENV'] !== 'production'
+const parsed = config({ path: envPath, override: dotenvOverride })
 if (parsed.error) {
   console.error('[shieldride] dotenv failed:', envPath, parsed.error.message)
 } else if (!existsSync(envPath)) {

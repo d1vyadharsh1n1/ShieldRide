@@ -5,7 +5,7 @@ Monorepo layout: `apps/web`, `apps/admin`, `services/api`, `packages/shared`.
 ## Prerequisites
 
 - **PostgreSQL** reachable from the internet (e.g. [Neon](https://neon.tech), Supabase, RDS). Serverless hosts do not run Docker Postgres.
-- Set **`DATABASE_URL`** on the API project. For Neon + Prisma serverless, use their pooled connection string and add `?pgbouncer=true` if required by your provider.
+- Set **`DATABASE_URL`** on the API project to a **hosted** Postgres URL (Neon, Supabase, etc.). **Do not use `localhost`** — Vercel cannot reach your laptop’s Docker DB. For Neon + Prisma serverless, use the pooled connection string and add `?pgbouncer=true` if required.
 - Run migrations from CI or your machine:  
   `cd services/api && npx prisma migrate deploy`
 
