@@ -1,7 +1,7 @@
 <!--
 ████████████████████████████████████████████████████████████████████████████████
   ShieldRide — README v1.0  |  Guidewire DEVTrails 2026  |  Phase 1 Submission
-  Team: [Your Team Name]  |  Persona: Grocery/Q-Commerce (Zepto · Blinkit)
+  Team: Recaptcha  |  Persona: Grocery/Q-Commerce (Zepto · Blinkit)
 ████████████████████████████████████████████████████████████████████████████████
 -->
 
