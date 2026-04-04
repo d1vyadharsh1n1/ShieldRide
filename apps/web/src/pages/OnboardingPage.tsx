@@ -61,7 +61,6 @@ export function OnboardingPage() {
   const [policyId, setPolicyId] = useState<string | null>(null)
 
   const newIdx = NEW_STEP_ORDER.indexOf(newStep)
-  const progressMax = NEW_STEP_ORDER.length - 1
 
   const loadPremium = useCallback(async () => {
     setErr(null)
