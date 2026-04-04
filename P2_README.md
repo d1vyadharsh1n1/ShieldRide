@@ -847,18 +847,6 @@ BREAK-EVEN
 - ✅ Admin panel with α recalibration
 - ✅ Mobile-responsive PWA at 375px
 
-### Phase 3 — Scale (Planned)
-- 🔲 XGBoost Risk Scorer (trained on accumulated payout data)
-- 🔲 Isolation Forest Fraud Detector (replacing rule-based B/G/L)
-- 🔲 LSTM Behavioral Model (30-day sequence modeling)
-- 🔲 CPCB AQI live API (replacing mock)
-- 🔲 Social disruption signal via NLP news parsing (the reserved 0.15 weight)
-- 🔲 WhatsApp Business API (replacing mock)
-- 🔲 AWS EKS + TimescaleDB + Redis Cluster production deployment
-- 🔲 Aadhaar DigiLocker real eKYC
-- 🔲 Platform webhook integration (real order feed for Trigger 5)
-- 🔲 Multi-city expansion beyond Chennai
-
 ---
 
 ## 💻 Getting Started
