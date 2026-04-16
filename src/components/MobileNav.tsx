@@ -2,13 +2,14 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Home, Zap, FileCheck, ScrollText, MessageCircle } from "lucide-react";
+import { Home, Zap, FileCheck, ScrollText, MessageCircle, ShieldAlert } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const items = [
   { href: "/", label: "Home", icon: Home },
   { href: "/disruptions", label: "Triggers", icon: Zap },
   { href: "/claims", label: "Claims", icon: FileCheck },
+  { href: "/fraud-demo", label: "Fraud", icon: ShieldAlert },
   { href: "/policy", label: "Policy", icon: ScrollText },
   { href: "/chat", label: "Chat", icon: MessageCircle },
 ];
