@@ -8,6 +8,7 @@ import {
 } from "@/lib/db-queries";
 import { hasSupabaseService } from "@/lib/supabase-server";
 import { RAJAN, SEED_PW } from "@/lib/seed-data";
+import { syncPolicyToGuidewire } from "@/lib/guidewire-client";
 
 export async function POST(req: Request) {
   const sub = await getSubFromAuthHeader(req);
@@ -32,6 +33,25 @@ export async function POST(req: Request) {
 
   let policyNumber = `GW-SR-${Date.now()}`;
   let policycenterId = `PC-${randomUUID().slice(0, 8)}`;
+
+  const guidewirePolicy = await syncPolicyToGuidewire({
+    worker_id: sub,
+    name,
+    city,
+    platform,
+    vehicle_type: vehicleType,
+    weekly_premium: weeklyPremium,
+    rw,
+    alpha,
+    daily_baseline_income: dailyBaseline,
+    coverage_limit: coverageLimit,
+    upi_vpa: upiVpa,
+  });
+
+  if (guidewirePolicy) {
+    policyNumber = guidewirePolicy.policy_number;
+    policycenterId = guidewirePolicy.policycenter_id;
+  }
 
   if (hasSupabaseService() && isUuid(sub)) {
     await updateWorkerProfile(sub, {
@@ -64,9 +84,9 @@ export async function POST(req: Request) {
 
   return NextResponse.json({
     policy_number: policyNumber,
-    status: "ACTIVE",
-    coverage_limit: coverageLimit,
-    guidewire_sync: true,
+    status: guidewirePolicy?.status ?? "ACTIVE",
+    coverage_limit: guidewirePolicy?.coverage_limit ?? coverageLimit,
+    guidewire_sync: guidewirePolicy?.guidewire_sync ?? true,
     policycenter_id: policycenterId,
     daily_baseline_income: dailyBaseline,
   });

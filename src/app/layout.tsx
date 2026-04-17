@@ -45,6 +45,7 @@ const nav = [
   { href: "/dashboard", label: "Dashboard" },
   { href: "/disruptions", label: "Triggers" },
   { href: "/claims", label: "Claims" },
+  { href: "/fraud-demo", label: "Fraud Demo" },
   { href: "/policy", label: "Policy" },
   { href: "/chat", label: "Chat" },
   { href: "/admin", label: "Admin" },

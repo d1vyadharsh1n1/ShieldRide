@@ -39,6 +39,9 @@ export default function LandingPage() {
             <Button asChild variant="outline" size="lg">
               <Link href="/dashboard">View demo dashboard</Link>
             </Button>
+            <Button asChild variant="outline" size="lg">
+              <Link href="/fraud-demo">Open fraud demo</Link>
+            </Button>
           </div>
         </div>
         <LandingHeroChart />

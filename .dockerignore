@@ -1,0 +1,11 @@
+node_modules
+.next
+tsconfig.tsbuildinfo
+npm-debug.log
+services/api/node_modules
+apps/*/node_modules
+apps/*/dist
+mock_guidewire/__pycache__
+backend/__pycache__
+*.pyc
+.git
